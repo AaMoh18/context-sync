@@ -2,7 +2,7 @@
 
 **AI-powered status updates for tired developers. Turn chaotic brain dumps into structured, audience-specific syncs in real-time.**
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-success?style=for-the-badge)]([(https://context-sync.netlify.app)])
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-success?style=for-the-badge)](https://context-sync-app.netlify.app)
 
 ## 🚀 The Problem
 
@@ -15,27 +15,29 @@ Daily standups and status updates carry high psychological friction. Developers 
 - 🧠 **AI Categorization Engine:** Instantly parses raw text into `Done`, `In Progress`, and `Blockers`.
 - 🗣️ **Semantic Translation:** Automatically generates tailored summaries based on the viewing audience.
 - 🎨 **Frictionless UX:** Features a custom, hand-drawn aesthetic to lower cognitive load and reduce the formality/stress of updates. 
-- ⚡ **Real-Time Sync:** Powered by Firebase Firestore, updates appear instantly across all team members' screens without refreshing.
+- 🔒 **Secure Access:** JWT-based user authentication and profile management.
 - 📱 **Fully Responsive:** CSS Grid architecture ensures a flawless experience from desktop to mobile.
+
+*Note: Real-time team dashboard syncing via Firestore is currently in our immediate future scope!*
 
 ## 🛠️ Tech Stack
 
-Our stack was chosen for maximum development velocity, reliability, and real-time performance.
+Our stack was chosen for maximum development velocity, reliability, and performance.
 
 ### Frontend
 * **Framework:** React 18 & Vite
 * **Styling:** Custom CSS (Hand-drawn aesthetic, CSS Grid)
 * **Animations:** Framer Motion
-* **Deployment:** Vercel
+* **Deployment:** Netlify
 
 ### Backend
 * **Runtime:** Node.js & Express.js
-* **Logic:** Custom pattern-matching AI / Categorization rules engine (ensures 10ms latency and 100% reliability for demos)
+* **Logic:** Custom pattern-matching AI / Categorization rules engine (ensures ultra-low latency and 100% reliability)
 * **Deployment:** Render
 
 ### Database
 * **Database:** Firebase Firestore (NoSQL)
-* **Architecture:** Real-time `onSnapshot()` listeners and consistent queries mapped directly to the problem domain.
+* **Architecture:** Structured documents mapped directly to the problem domain.
 
 ## 🗄️ Data Architecture
 
