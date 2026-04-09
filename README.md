@@ -2,7 +2,7 @@
 
 **AI-powered status updates for tired developers. Turn chaotic brain dumps into structured, audience-specific syncs in real-time.**
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-success?style=for-the-badge)]((https://context-sync.netlify.app))
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-success?style=for-the-badge)]([(https://context-sync.netlify.app)])
 
 ## 🚀 The Problem
 
