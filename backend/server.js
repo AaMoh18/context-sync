@@ -10,8 +10,9 @@ app.use(cors({
   origin: [
     'http://localhost:5173',           // Local development
     'http://localhost:5174',           // Alternative local port
-    'https://context-sync.vercel.app', // Your Vercel URL (update after deployment)
-    /\.vercel\.app$/                   // Any Vercel preview deployment
+    'https://context-sync.vercel.app', // Your Vercel URL
+    /\.vercel\.app$/,                  // Any Vercel preview deployment
+    /\.netlify\.app$/                  // Any Netlify deployment ← ADD THIS LINE
   ],
   credentials: true
 }));
@@ -19,10 +20,20 @@ app.use(cors({
 app.use(express.json());
 
 // Firebase setup
-const serviceAccount = require('./serviceAccountKey.json');
+// Firebase setup - works in both development and production
+let serviceAccount;
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  // Production: Use environment variable (Netlify/Render)
+  serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+} else {
+  // Development: Use local JSON file
+  serviceAccount = require('./serviceAccountKey.json');
+}
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+
 const db = admin.firestore();
 
 // AI Response function

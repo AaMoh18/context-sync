@@ -9,7 +9,7 @@ function App() {
   const handleBrainDump = async (rawText) => {
     setIsLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/translate', { rawText });
+      await axios.post('/api/translate', { rawText });
     } catch (error) {
       alert('Oops! The pencil broke. Try again?');
       console.error(error);
